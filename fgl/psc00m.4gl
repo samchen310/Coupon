@@ -340,6 +340,9 @@ MAIN
             IF  NOT CheckAuthority( "8", FALSE )  THEN
                 HIDE OPTION "8)°h¥ó"
             END IF
+            IF  NOT CheckAuthority( "9", FALSE )  THEN
+                HIDE OPTION "9)°h¥ó¤@"
+            END IF   
 
 
 

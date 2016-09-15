@@ -343,10 +343,10 @@ MAIN
             IF  NOT CheckAuthority( "9", FALSE )  THEN
                 HIDE OPTION "9)退件一"
             END IF   
-            IF  NOT CheckAuthority( "9", FALSE )  THEN
+            IF  NOT CheckAuthority( "10", FALSE )  THEN
                 HIDE OPTION "10)退件二”
             END IF 
-            IF  NOT CheckAuthority( "9", FALSE )  THEN
+            IF  NOT CheckAuthority( "11", FALSE )  THEN
                 HIDE OPTION "11)照會一"
             END IF
 
@@ -489,6 +489,12 @@ FUNCTION  psc00m_sel_1()
                    , PROMPT LINE LAST )
 
     IF INT_FLAG=TRUE THEN
+        CLOSE WINDOW w_psc00m01
+        LET INT_FLAG=FALSE
+        RETURN
+    END IF
+    
+     IF INT_FLAG=TRUE THEN
         CLOSE WINDOW w_psc00m01
         LET INT_FLAG=FALSE
         RETURN

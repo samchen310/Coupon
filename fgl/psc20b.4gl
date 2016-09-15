@@ -24,9 +24,6 @@
 --  修改日期: 105/01/29
 --  修 改 者: JUCHUN 
 ------------------------------------------------------------------------------
-—-yirong test git
-------------------------------------------------------------------------------
-
 GLOBALS "../def/common.4gl"
 DATABASE life
 
@@ -97,6 +94,8 @@ MAIN
    LET f_bank_address_e  = ''
    LET g_program_id = "psc20b"
    
+
+———yirong test SR12
    
    -- 104/11/26 加上週年日與還本險種條件,移除ROWID    
 #  DECLARE benf_ptr CURSOR WITH HOLD FOR

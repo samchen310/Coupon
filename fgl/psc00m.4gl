@@ -77,10 +77,6 @@
 --            若已存在pscp,就用pscp紀錄的險種判斷 
 --            否則,用保單目前險種來判斷 
 -------------------------------------------------------------------------------
---  修  改:yirong test git
--------------------------------------------------------------------------------
-
-
 
 GLOBALS "../def/common.4gl"
 GLOBALS "../def/lf.4gl"
@@ -347,10 +343,10 @@ MAIN
             IF  NOT CheckAuthority( "9", FALSE )  THEN
                 HIDE OPTION "9)退件一"
             END IF   
-            IF  NOT CheckAuthority( "10", FALSE )  THEN
+            IF  NOT CheckAuthority( "9", FALSE )  THEN
                 HIDE OPTION "10)退件二”
             END IF 
-            IF  NOT CheckAuthority( "11", FALSE )  THEN
+            IF  NOT CheckAuthority( "9", FALSE )  THEN
                 HIDE OPTION "11)照會一"
             END IF
 
@@ -493,12 +489,6 @@ FUNCTION  psc00m_sel_1()
                    , PROMPT LINE LAST )
 
     IF INT_FLAG=TRUE THEN
-        CLOSE WINDOW w_psc00m01
-        LET INT_FLAG=FALSE
-        RETURN
-    END IF
-    
-     IF INT_FLAG=TRUE THEN
         CLOSE WINDOW w_psc00m01
         LET INT_FLAG=FALSE
         RETURN

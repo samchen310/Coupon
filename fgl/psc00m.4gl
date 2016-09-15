@@ -343,7 +343,9 @@ MAIN
             IF  NOT CheckAuthority( "9", FALSE )  THEN
                 HIDE OPTION "9)退件一"
             END IF   
-
+            IF  NOT CheckAuthority( "9", FALSE )  THEN
+                HIDE OPTION "9)照會一"
+            END IF 
 
 
         COMMAND "1)回覆"

@@ -343,9 +343,12 @@ MAIN
             IF  NOT CheckAuthority( "9", FALSE )  THEN
                 HIDE OPTION "9)退件一"
             END IF   
-             IF  NOT CheckAuthority( "9", FALSE )  THEN
-                HIDE OPTION "9)退件二”
+            IF  NOT CheckAuthority( "9", FALSE )  THEN
+                HIDE OPTION "10)退件二”
             END IF 
+            IF  NOT CheckAuthority( "9", FALSE )  THEN
+                HIDE OPTION "11)照會一"
+            END IF
 
 
 
